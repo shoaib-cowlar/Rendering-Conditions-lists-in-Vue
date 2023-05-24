@@ -24,7 +24,9 @@
         No goals have been added yet - please start adding some!
       </p>
       <ul v-else>
-        <li v-for="(goal ,index) in goals">Index of {{ goal }}is {{index}}</li>
+        <li v-for="(goal ,index) in goals" @click="removeGoal(index)">
+          Index of {{ goal }} is {{index}}
+        </li>
         <li v-for="(value , key , index) in  {name:'shoaib',age:31}">
           {{key}}: {{value}} and index is {{index}}
         </li>
